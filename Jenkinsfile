@@ -1,21 +1,28 @@
-pipeline {
-    agent any 
-
-       stage('Build') { 
-            steps { 
-                'mvn clean install'
-            }
-        }
-        stage('Test'){
-            steps {
-                sh 'make check'
-                junit 'reports/**/*.xml' 
-            }
-        }
-        stage('Deploy') {
-            steps {
-                sh 'make publish'
-            }
-        }
-    }
+pipeline{
+	agent any
+	
+	stages{
+	
+	
+	
+		stage('Compile stage'){
+			steps{
+				withMaven(maven : 'MAVEN_TOOL'){
+				   sh 'mvn clean compile'
+				}
+			}
+		}
+		
+		stage('Testing stage'){
+			steps{
+				withMaven(maven : 'MAVEN_TOOL'){
+				   sh 'mvn test'
+				}
+			}
+		}
+		
+		
+	
+	}
+	
 }
