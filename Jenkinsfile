@@ -7,7 +7,7 @@ pipeline{
 	
 		stage('Compile stage') {
 			steps{
-				maven:'maven_3_5_2' {
+				maven(maven:'maven_3_5_2') {
 				   sh 'mvn clean compile'
 				}
 			}
@@ -15,7 +15,7 @@ pipeline{
 		
 		stage('Testing stage') {
 			steps{
-				maven:'maven_3_5_2' {
+				maven(maven:'maven_3_5_2') {
 				   sh 'mvn test'
 				}
 			}
