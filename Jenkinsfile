@@ -6,7 +6,7 @@ pipeline{
 		stage('compile stage'){
 			steps{
 				withMaven(maven : 'maven_3_5_2'){
-					sh 'mvn clean package'
+					sh 'mvn clean package tomcat:deploy'
 				}
 			}
 		}
