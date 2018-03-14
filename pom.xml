@@ -9,6 +9,7 @@
   <url>http://maven.apache.org</url>
   
   <dependencies>
+  
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -28,23 +29,23 @@
 	
 	<build>
     	<finalName>trucks</finalName>
-	<pluginManagement>
-	<plugins>
-		<plugin>
+		<pluginManagement>
+		<plugins>
+			<plugin>
         		<groupId>org.apache.maven.plugins</groupId>
         		<artifactId>maven-surefire-plugin</artifactId>
         		<configuration>
           			<runOrder>random</runOrder>
         		</configuration>
-		</plugin>
+			</plugin>
 	  
-		<plugin>
+			<plugin>
               		<groupId>org.jacoco</groupId>
               		<artifactId>jacoco-maven-plugin</artifactId>
               		<version>0.7.8</version>
- 		</plugin>
- 	</plugins>
+			</plugin>
+		</plugins>
 	</pluginManagement>
-	<build>
+	</build>
 		
 </project>
