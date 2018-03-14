@@ -27,7 +27,7 @@
     <sonar.jacoco.itReportPath>${project.basedir}/../target/jacoco-it.exec</sonar.jacoco.itReportPath>
     <sonar.groovy.binaries>target/classes</sonar.groovy.binaries>
     <sonar.host.url>http://localhost:9000</sonar.host.url>
-    <sonar.username>admin</sonar.username>
+    <sonar.login>admin</sonar.login>
     <sonar.password>admin</sonar.password>
   </properties>
   <build>
